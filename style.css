@@ -1,0 +1,232 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilo para a área de adição de tarefa com data */
+.add-task-controls {
+  display: flex;
+  margin-bottom: 5px;
+  gap: 5px;
+}
+
+.add-task-controls #taskInput {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.add-task-controls #taskDueDate {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 150px;
+}
+
+.add-task-controls #addTaskBtn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.add-task-controls #addTaskBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para a área de recorrência (AGORA SELEÇÃO DE DIAS) */
+.recurrence-area {
+  margin-bottom: 20px;
+  padding-left: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.recurrence-area > label {
+  display: block; /* Garante que a label ocupe sua própria linha */
+  margin-bottom: 5px;
+}
+
+.day-selectors {
+  display: flex;
+  gap: 8px; /* Espaçamento entre os seletores de dia */
+  flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+}
+
+/* Esconde o input checkbox nativo */
+.day-selectors input[type="checkbox"] {
+  display: none;
+}
+
+/* Estilo para a label (que se parece com um botão) */
+.day-selectors label {
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.2s;
+  font-size: 12px;
+}
+
+/* Estilo para a label quando o checkbox correspondente está marcado */
+.day-selectors input[type="checkbox"]:checked + label {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* Estilo para a área de visualização de data */
+.view-date-area {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.view-date-area h3 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 16px;
+}
+
+#currentViewDateText {
+  font-weight: bold;
+  color: #007bff;
+}
+
+#viewDateSelector {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Estilo para a Lista */
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Tarefa Completa (Check) */
+.completed {
+  background-color: #e6ffe6 !important;
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.task-text {
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+/* Estilo para a Data de Criação/Vencimento */
+.task-date {
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  margin-left: 15px;
+}
+
+/* Botões de Ação */
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  transition: color 0.3s;
+}
+
+.check-btn {
+  color: #28a745;
+}
+
+.check-btn:hover {
+  color: #1e7e34;
+}
+
+.delete-btn {
+  color: #dc3545;
+}
+
+.delete-btn:hover {
+  color: #bd2130;
+}
+
+/* Estilo para os Filtros */
+.filters {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.filters button {
+  padding: 8px 15px;
+  border: 1px solid #007bff;
+  background-color: white;
+  color: #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: all 0.3s;
+}
+
+.filters button.active,
+.filters button:hover {
+  background-color: #007bff;
+  color: white;
+}

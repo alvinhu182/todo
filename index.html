@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Lista de Tarefas Local</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Lista de Tarefas</h1>
+
+      <div class="add-task-controls">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Digite uma nova tarefa..."
+        />
+        <input type="date" id="taskDueDate" />
+        <button id="addTaskBtn">Adicionar</button>
+      </div>
+      <div class="recurrence-area">
+        <label>Repetir semanalmente:</label>
+        <div class="day-selectors">
+          <input type="checkbox" id="rep-1" data-day="1" /><label for="rep-1"
+            >Seg</label
+          >
+          <input type="checkbox" id="rep-2" data-day="2" /><label for="rep-2"
+            >Ter</label
+          >
+          <input type="checkbox" id="rep-3" data-day="3" /><label for="rep-3"
+            >Qua</label
+          >
+          <input type="checkbox" id="rep-4" data-day="4" /><label for="rep-4"
+            >Qui</label
+          >
+          <input type="checkbox" id="rep-5" data-day="5" /><label for="rep-5"
+            >Sex</label
+          >
+          <input type="checkbox" id="rep-6" data-day="6" /><label for="rep-6"
+            >Sáb</label
+          >
+          <input type="checkbox" id="rep-0" data-day="0" /><label for="rep-0"
+            >Dom</label
+          >
+        </div>
+      </div>
+      <div class="view-date-area">
+        <h3>Visualizar Tarefas em: <span id="currentViewDateText"></span></h3>
+        <input type="date" id="viewDateSelector" />
+      </div>
+      <div class="filters">
+        <button id="filterAll" class="active">Todas</button>
+        <button id="filterActive">Pendentes</button>
+        <button id="filterCompleted">Completas</button>
+      </div>
+
+      <ul id="taskList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
